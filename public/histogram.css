@@ -1,0 +1,37 @@
+
+.left {
+    float:left;
+    background-color: #eaf1f3;
+    margin-left: 35px;
+    margin-right: 15px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    border: 1px solid ##a3b5ba;
+}
+.right {
+    display: inline-block;
+    background-color: #eaf1f3;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 130px;
+    padding-bottom: 30px;
+    border: 1px solid ##a3b5ba;
+}
+.tableheader{
+  color:red;
+  font-size:  1.3rem;
+}
+td {
+  padding-top: 14px;
+  padding-left: 15px;
+}
+h2{
+  font-family: sans-serif;
+  font-weight: normal;
+}
+input[type=number]{
+  width: 80%;
+  line-height: 18px;
+}

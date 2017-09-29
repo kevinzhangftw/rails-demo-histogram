@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="histogram.css"/>
+  <script type="text/javascript" src="calculate.js" ></script>
+</head>
+
+<body>
+  <h2> Histogram Generator </h2>
+  <table class="left">
+    <tr class="tableheader">
+      <th>Lower bounds</th>
+    </tr>
+    <tr>
+      <td>Max</td>
+      <td><input type="number" onblur="onboundchanged(0)" id="l0" min="0" max ="100" step="0.01"/></td>
+    </tr>
+    <tr>
+      <td>A+</td>
+      <td><input type="number" onblur="onboundchanged(1)" id="l1" min="0" max ="100" step="0.01"/></td>
+    </tr>
+    <tr>
+      <td>A</td>
+      <td><input type="number" onblur="onboundchanged(2)" id="l2" min="0" max ="100" step="0.01"/></td>
+    </tr>
+    <tr>
+      <td>A-</td>
+      <td><input type="number" onblur="onboundchanged(3)" id="l3" min="0" max ="100" step="0.01"/></td>
+    </tr>
+    <tr>
+      <td>B+</td>
+      <td><input type="number" onblur="onboundchanged(4)" id="l4" min="0" max ="100" step="0.01"/></td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td><input type="number" onblur="onboundchanged(5)" id="l5" min="0" max ="100" step="0.01"/></td>
+    </tr>
+    <tr>
+      <td>B-</td>
+      <td><input type="number" onblur="onboundchanged(6)" id="l6" min="0" max ="100" step="0.01"/></td>
+    </tr>
+    <tr>
+      <td>C+</td>
+      <td><input type="number" onblur="onboundchanged(7)" id="l7" min="0" max ="100" step="0.01"/></td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td><input type="number" onblur="onboundchanged(8)" id="l8" min="0" max ="100" step="0.01"/></td>
+    </tr>
+    <tr>
+      <td>C-</td>
+      <td><input type="number" onblur="onboundchanged(9)" id="l9" min="0" max ="100" step="0.01"/></td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td><input type="number" onblur="onboundchanged(10)" id="l10" min="0" max ="100" step="0.01"/></td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td><input type="number" onblur="onboundchanged(11)" id="l11" min="0" max ="100" step="0.01"/></td>
+    </tr>
+  </table>
+
+  <table class="right">
+
+    <th class="tableheader">
+        Histogram
+    </th>
+    <tr>
+      <td>A+</td>
+      <td id="r0"> </td>
+    </tr>
+    <tr>
+      <td>A</td>
+      <td id="r1"> </td>
+    </tr>
+    <tr>
+      <td>A-</td>
+      <td id="r2"> </td>
+    </tr>
+    <tr>
+      <td>B+</td>
+      <td id="r3"> </td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td id="r4"> </td>
+    </tr>
+    <tr>
+      <td>B-</td>
+      <td id="r5"> </td>
+    </tr>
+    <tr>
+      <td>C+</td>
+      <td id="r6"> </td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td id="r7"> </td>
+    </tr>
+    <tr>
+      <td>C-</td>
+      <td id="r8"> </td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td id="r9"> </td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td id="r10"> </td>
+    </tr>
+  </table>
+
+
+</body>
+</html>
