@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20171008055530) do
   enable_extension "plpgsql"
 
   create_table "courses", force: :cascade do |t|
-    t.integer  "course_id"
+    t.string   "course"
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20171008055530) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "students", force: :cascade do |t|
+  create_table "students", id: false, force: :cascade do |t|
     t.integer  "student_id"
     t.string   "name"
     t.string   "email"
