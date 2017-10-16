@@ -7,7 +7,6 @@
 <body>
   <h2> Histogram Generator </h2>
   <h2> <%= grades_counts %> </h2>
-  <h2> <%= grades_bounds %> </h2>
   <table class="left">
     <tr class="tableheader">
       <th>Lower bounds</th>
@@ -69,47 +68,91 @@
     </th>
     <tr>
       <td>A+</td>
-      <td id="r0"> </td>
+      <td id="r0">
+      <% (1..grades_counts["A+"]).each do |img_name| %>
+        <img src="redtiny.png" />
+      <% end %>
+    </td>
     </tr>
     <tr>
       <td>A</td>
-      <td id="r1"> </td>
+      <td id="r1">
+        <% (1..grades_counts["A"]).each do |img_name| %>
+          <img src="redtiny.png" />
+        <% end %>
+      </td>
     </tr>
     <tr>
       <td>A-</td>
-      <td id="r2"> </td>
+      <td id="r2">
+        <% (1..grades_counts["A-"]).each do |img_name| %>
+          <img src="redtiny.png" />
+        <% end %>
+      </td>
     </tr>
     <tr>
       <td>B+</td>
-      <td id="r3"> </td>
+      <td id="r3">
+        <% (1..grades_counts["B+"]).each do |img_name| %>
+          <img src="redtiny.png" />
+        <% end %>
+      </td>
     </tr>
     <tr>
       <td>B</td>
-      <td id="r4"> </td>
+      <td id="r4">
+        <% (1..grades_counts["B"]).each do |img_name| %>
+          <img src="redtiny.png" />
+        <% end %>
+      </td>
     </tr>
     <tr>
       <td>B-</td>
-      <td id="r5"> </td>
+      <td id="r5">
+        <% (1..grades_counts["B-"]).each do |img_name| %>
+          <img src="redtiny.png" />
+        <% end %>
+      </td>
     </tr>
     <tr>
       <td>C+</td>
-      <td id="r6"> </td>
+      <td id="r6">
+        <% (1..grades_counts["C+"]).each do |img_name| %>
+          <img src="redtiny.png" />
+        <% end %>
+      </td>
     </tr>
     <tr>
       <td>C</td>
-      <td id="r7"> </td>
+      <td id="r7">
+        <% (1..grades_counts["C"]).each do |img_name| %>
+          <img src="redtiny.png" />
+        <% end %>
+      </td>
     </tr>
     <tr>
       <td>C-</td>
-      <td id="r8"> </td>
+      <td id="r8">
+        <% (1..grades_counts["C-"]).each do |img_name| %>
+          <img src="redtiny.png" />
+        <% end %>
+      </td>
     </tr>
     <tr>
       <td>D</td>
-      <td id="r9"> </td>
+      <td id="r9">
+        <% (1..grades_counts["D"]).each do |img_name| %>
+          <img src="redtiny.png" />
+        <% end %>
+      </td>
     </tr>
     <tr>
       <td>F</td>
-      <td id="r10"> </td>
+      <td id="r10">
+        <% (1..grades_counts["F"]).each do |img_name| %>
+          <img src="redtiny.png" />
+        <% end %>
+      </td>
     </tr>
   </table>
 

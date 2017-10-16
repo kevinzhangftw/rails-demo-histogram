@@ -19,12 +19,12 @@ class HistogramController < ApplicationController
     #TODO: pass in course params
     grades = Course.first.enrolls.collect(&:lettergrade)
     counts = Hash.new 0
-
     grades.each do |grade|
       counts[grade] += 1
     end
 
     return counts
   end
+
 
 end
