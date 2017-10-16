@@ -11,9 +11,8 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  get '/histogram/:id', to: 'histogram#show'
   get 'histogram' => 'histogram#show'
-  get 'histogram/submitbounds' => 'histogram#submitbounds'
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

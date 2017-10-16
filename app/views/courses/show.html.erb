@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-
 <table>
 	  <thead>
 		      <tr>
-			            <th>Student ID</th>
+			      <th>Student ID</th>
 				    <th>Percentage</th>
 				    <th>Lettergrade</th>
 			            <th colspan="3"></th>
@@ -23,5 +22,5 @@
 </table>
 
 <%= link_to 'Back', courses_path %>
-#TODO: invoke controller method to redirect...
+#TODO: pass course id to HistogramController
 <%= link_to 'Assign Grades', '/histogram.html' %>
