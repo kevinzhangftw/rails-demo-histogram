@@ -2,17 +2,14 @@ class HistogramController < ApplicationController
 
   def show
     set_course
+    @bounds = []
     render template: "histogram.html.erb",
-      :locals => { grades_counts: grades_counts, grades_bounds:grades_bounds}
+      :locals => { grades_counts: grades_counts}
   end
+
 
   def submitbounds
     render json: {"submit": "grade bounds "}
-  end
-
-  def grades_bounds
-    #get grade bounds from view, update database lettergrade column
-    return "SOME BOUNDs"
   end
 
   def grades_counts
@@ -23,6 +20,11 @@ class HistogramController < ApplicationController
     end
 
     return counts
+  end
+
+  helper_method :course_id
+  def course_id
+    @course.id
   end
 
   private

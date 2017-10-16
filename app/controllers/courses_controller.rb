@@ -7,10 +7,87 @@ class CoursesController < ApplicationController
     @courses = Course.all
   end
 
+  def normalize
+    puts "normalizing"
+    # TODO: update database
+    course_id =  params[:course_id]
+    @course = Course.find(course_id)
+    @course.enrolls.each do |enrollment|
+      enrollment.lettergrade = new_grades(enrollment.percentage, params)
+      enrollment.save!
+    end
+    render json: @course.enrolls
+  end
+
+  def new_grades(percentage, brackets)
+    puts brackets
+    puts "assigning........"
+    l0 = brackets[:l0].to_i
+    l1 = brackets[:l1].to_i
+    l2 = brackets[:l2].to_i
+    l3 = brackets[:l3].to_i
+    l4 = brackets[:l4].to_i
+    l5 = brackets[:l5].to_i
+    l6 = brackets[:l6].to_i
+    l7 = brackets[:l7].to_i
+    l8 = brackets[:l8].to_i
+    l9 = brackets[:l9].to_i
+    l10 = brackets[:l10].to_i
+    l11 = brackets[:l11].to_i
+    if percentage < l0 && percentage >= l1
+      return "A+"
+    end
+    if percentage < l1 && percentage >= l2
+      return "A"
+    end
+    if percentage < l2 && percentage >= l3
+      return "A-"
+    end
+    if percentage < l3 && percentage >= l4
+      return "B+"
+    end
+    if percentage < l4 && percentage >= l5
+      return "B"
+    end
+    if percentage < l5 && percentage >= l6
+      return "B-"
+    end
+    if percentage < l6 && percentage >= l7
+      return "C+"
+    end
+    if percentage < l7 && percentage >= l8
+      return "C"
+    end
+    if percentage < l8 && percentage >= l9
+      return "C-"
+    end
+    if percentage < l9 && percentage >= l10
+      return "D"
+    end
+    if percentage < l10 && percentage >= l11
+      return "F"
+    end
+  end
   # GET /courses/1
   # GET /courses/1.json
   def show
-	@allenrolls = @course.enrolls
+	   @allenrolls = @course.enrolls
+
+  end
+
+  def submit
+    @maxbound = params[:l0]
+    unless @maxbound.blank?
+       render '/index'
+    end
+    @aplusbound = params[:l1]
+    unless @aplusbound.blank?
+       render '/index'
+    end
+    @bplusbound = params[:l1]
+    unless @bplusbound.blank?
+       render '/index'
+    end
   end
 
   # GET /courses/new
@@ -61,6 +138,8 @@ class CoursesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -9,10 +9,12 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  root 'welcome#index'
+  root 'students#index'
 
   get '/histogram/:id', to: 'histogram#show'
   get 'histogram' => 'histogram#show'
+
+  post 'normalize_courses' => 'courses#normalize'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
